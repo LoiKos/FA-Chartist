@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "homepage": "https://github.com/Loiclp/FA-Chartist",
   "authors": [
-    "Loic LE PENN <loic.lepenn@orange.com>"
+    "Loic LE PENN "
   ],
   "description": "Directive Angular to use Chartist.JS",
   "main": "src/fa-chartist.js",
