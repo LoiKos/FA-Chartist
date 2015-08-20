@@ -172,7 +172,6 @@ $scope.ercoption ={
   axisX: {
     labelInterpolationFnc: function(value) {
       return value.split(/\s+/).map(function(word) {
-        console.log(word);
         return word[0];
       }).join('');
     }

@@ -1,9 +1,126 @@
-.ct-line.ct-threshold-above, .ct-point.ct-threshold-above, .ct-bar.ct-threshold-above {
-  stroke: #f05b4f;
+@-webkit-keyframes dashoffset {
+  0% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: -20px;
+  }
+}
+@-moz-keyframes dashoffset {
+  0% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: -20px;
+  }
+}
+@-ms-keyframes dashoffset {
+  0% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: -20px;
+  }
+}
+@keyframes dashoffset {
+  0% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: -20px;
+  }
 }
 
-.ct-line.ct-threshold-below, .ct-point.ct-threshold-below, .ct-bar.ct-threshold-below {
+@-webkit-keyframes exploding-stroke {
+  0% {
+    stroke-width: 2px;
+    opacity: 1;
+  }
+  100% {
+    stroke-width: 40px;
+    opacity: 0;
+  }
+}
+@-moz-keyframes exploding-stroke {
+  0% {
+    stroke-width: 2px;
+    opacity: 1;
+  }
+  100% {
+    stroke-width: 40px;
+    opacity: 0;
+  }
+}
+@-ms-keyframes exploding-stroke {
+  0% {
+    stroke-width: 2px;
+    opacity: 1;
+  }
+  100% {
+    stroke-width: 40px;
+    opacity: 0;
+  }
+}
+@keyframes exploding-stroke {
+  0% {
+    stroke-width: 2px;
+    opacity: 1;
+  }
+  100% {
+    stroke-width: 40px;
+    opacity: 0;
+  }
+}
+
+.ct-line.ct-threshold-above, .ct-bar.ct-threshold-above {
+  stroke: #f05b4f;
+   stroke-dasharray: 1px 5px;
+  -webkit-animation: dashoffset 2s linear infinite;
+  /* Safari 4+ */
+  -moz-animation: dashoffset 2s linear infinite;
+  /* Fx 5+ */
+  -o-animation: dashoffset 2s linear infinite;
+  /* Opera 12+ */
+  animation: dashoffset 2s linear infinite;
+  /* IE 10+ */
+}
+
+.ct-point.ct-threshold-above{
+    stroke: #f05b4f;
+    -webkit-animation: exploding-stroke 1.8s linear infinite;
+  /* Safari 4+ */
+  -moz-animation: exploding-stroke 1.8s linear infinite;
+  /* Fx 5+ */
+  -o-animation: exploding-stroke 1.8s linear infinite;
+  /* Opera 12+ */
+  animation: exploding-stroke 1.8s linear infinite;
+  /* IE 10+ */
+}
+
+
+ .ct-point.ct-threshold-below {
+     stroke: #59922b;
+    -webkit-animation: exploding-stroke 1.8s linear infinite;
+  /* Safari 4+ */
+  -moz-animation: exploding-stroke 1.8s linear infinite;
+  /* Fx 5+ */
+  -o-animation: exploding-stroke 1.8s linear infinite;
+  /* Opera 12+ */
+  animation: exploding-stroke 1.8s linear infinite;
+  /* IE 10+ */
+}
+
+.ct-line.ct-threshold-below,.ct-bar.ct-threshold-below {
   stroke: #59922b;
+    stroke-dasharray: 1px 5px;
+  -webkit-animation: dashoffset 2s linear infinite;
+  /* Safari 4+ */
+  -moz-animation: dashoffset 2s linear infinite;
+  /* Fx 5+ */
+  -o-animation: dashoffset 2s linear infinite;
+  /* Opera 12+ */
+  animation: dashoffset 2s linear infinite;
+  /* IE 10+ */
 }
 
 .ct-area.ct-threshold-above {
