@@ -1,0 +1,177 @@
+.ct-line.ct-threshold-above, .ct-point.ct-threshold-above, .ct-bar.ct-threshold-above {
+  stroke: #f05b4f;
+}
+
+.ct-line.ct-threshold-below, .ct-point.ct-threshold-below, .ct-bar.ct-threshold-below {
+  stroke: #59922b;
+}
+
+.ct-area.ct-threshold-above {
+  fill: #f05b4f;
+}
+
+.ct-area.ct-threshold-below {
+  fill: #59922b;
+}
+
+
+html,body{
+       height: 100%;
+    margin: 0; padding: 0;
+font-size:17px;
+margin:0;padding:0;
+}
+
+body{
+    font-family: 'Kaushan Script', cursive;
+}
+
+.st_headers{
+text-align: center;
+width: 100%;
+height:322px;
+
+background-color:#f05b4f;
+
+opacity:0.95;
+
+}
+
+.st_headers h3{
+    margin :0;
+    font-size:65px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 170px;
+   
+}
+
+.tooltip{
+	opacity: initial; 	
+    position: absolute;
+    display: inline-block;
+    min-width: 5em;
+    padding: .3em;
+    background: #F4C63D;
+    color: #453D3F;
+    font-weight: 700;
+    text-align: center;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.row {width:100%;}
+
+.rowcollapse{
+    width:auto; 
+    padding-top: 30px;
+    background-color:#eee;
+    margin-right:0;
+
+}
+
+.conf{
+background-color: #191919;
+}
+
+img{
+max-width: 300px;
+margin-top: -27px;
+}
+
+
+
+footer{
+
+    bottom: 0px;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+
+    height:auto;
+    background:#323232;
+    color:#eee;
+}
+
+footer p{
+    padding:15px;
+    margin:0;
+}
+
+footer img{
+    margin-top:17px;
+
+    height:75px;
+    width:75px;
+
+}
+
+
+
+.codeblock{
+    padding: 1em 1em;
+}
+
+.codeblock pre{ background: #323232;color:white;}
+
+.col-md-6{
+    margin-bottom: 3%
+}
+
+.img_right{
+
+    margin-left: 42%;
+    border-top-right-radius: 123px;
+    border-top-left-radius: 123px;
+    background-color: transparent;
+}
+
+
+
+.label{
+    display:block;
+    width:100%;
+    background: #FDC126;
+    color:#333;
+}
+
+.label h4{text-align: center;
+    vertical-align: middle;
+    line-height: 113px;
+    font-size: 25px;
+    display:inline-block;
+    margin-right: 52%;
+}
+
+ .icon{
+    margin-top:25px;
+}
+  
+.tooltip:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -15px;
+    border: 15px solid transparent;
+    border-top-color: #F4C63D;
+}
+
+.label_icon{
+    display: inline-block;
+    text-align: center;
+    line-height: 68px;
+    font-size: 45px;
+    color: #FDC126;
+    height: 70px;
+    width: 70px;
+    background-color: #f05b4f;
+    border-radius: 50%;
+    box-shadow: 1px 4px 7px #323232;
+}
+
+svg{
+    font-family:  "Trebuchet MS", Helvetica, sans-serif;
+}

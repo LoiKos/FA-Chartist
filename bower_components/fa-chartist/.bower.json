@@ -1,0 +1,32 @@
+{
+  "name": "fa-chartist",
+  "homepage": "https://github.com/Loiclp/FA-Chartist",
+  "authors": [
+    "Loic LE PENN "
+  ],
+  "description": "Directive Angular to use Chartist.JS",
+  "main": "src/fa-chartist.js",
+  "keywords": [
+    "AngularJS",
+    "Directive",
+    "ChartistJS"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "8a24e6d24a",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "8a24e6d24a039b6e1affc0cb6e271d8e82bed88a"
+  },
+  "_source": "https://github.com/Loiclp/FA-Chartist.git",
+  "_target": "*",
+  "_originalSource": "fa-chartist",
+  "_direct": true
+}

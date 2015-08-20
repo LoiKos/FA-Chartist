@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="myApp">
+<head>
+	<link rel="stylesheet" href="bower_components/chartist/dist/chartist.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="bower_components/bootstrap-css-only/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="index.css">
+
+  <title>FA-Chartist</title>
+</head>
+
+<body ng-controller="appController">
+	<div class="st_headers">
+		<h3>Chartist.JS Directive For Angular</h3>
+        <img class="img_left" src="img/AngularJS_logo.svg.png"/>
+        <img class="img_right" src="img/chartist.png"/>
+    </div>
+
+
+    <div class='label' ng-click="lceCollapsed = !lceCollapsed">
+        <div class="row">
+          <div class="col-md-4 icon">
+            <div class="label_icon"><i ng-if="!lceCollapsed" class="fa fa-chevron-up " ></i> 
+              <i ng-if="lceCollapsed" class="fa fa-chevron-down " ></i></div> 
+          </div>
+          <div class="col-md-8"><h4>Line Chart Example </h4></div>
+      </div>
+  </div> 	
+
+  <div class="row rowcollapse" ng-hide="lceCollapsed" ng-controller="LineController">
+      <div class="col-md-6 ">
+        <h4 style="text-align:center">Simple Line Chart</h4>
+        <div fa-chartist fa-data='slcdata' fa-options='slcoption' fa-type="Line"></div>
+    </div>
+    <div class="col-md-6">
+        <h4 style="text-align:center">Holes in Data</h4>
+        <div fa-chartist fa-data='hiddata' fa-options='hidoption' fa-type="Line"></div>
+    </div>
+    <div class="col-md-6 " >
+        <h4 style="text-align:center">Only whole Numbers</h4>
+        <div fa-chartist fa-data='owndata' fa-options='ownoption' fa-type="Line"></div>
+    </div>
+    <div class="col-md-6">
+        <h4 style="text-align:center">Line Scatter Diagram With Responsive Settings</h4>
+        <div fa-chartist fa-data='lsdwrsdata' fa-options='lsdwrsoption' fa-responsive-options="lsdwrsresponsiveoption" fa-tooltips='false' fa-type="Line"></div>
+    </div>
+    <div class="col-md-6 ">
+        <h4 style="text-align:center">Line Chart With Tooltips</h4>
+        <div fa-chartist fa-data='lcwtdata' fa-tooltips='true' fa-type="Line"></div>
+    </div>
+    <div class="col-md-6">
+        <h4 style="text-align:center">Line Chart With Area</h4>
+        <div fa-chartist fa-data='lcwadata' fa-options='lcwaoption' fa-type="Line"></div>
+    </div>
+    <div class="col-md-6">
+        <h4 style="text-align:center">Bi-Polar Line Chart With Area Only</h4>
+        <div fa-chartist fa-data='blcwaodata' fa-options="blcwaooption" fa-type="Line"></div>
+    </div>
+    <div class="col-md-6">
+        <h4 style="text-align:center">Using Events To Replace Graphics</h4>
+        <div fa-chartist fa-data='uetrgdata' fa-funct="ftriangle" fa-type="Line"></div>
+    </div>
+    <div class="col-md-6">
+        <h4 style="text-align:center">Line Interpolation / Smoothing</h4>
+        <div fa-chartist fa-data='lisdata' fa-options="lisoption" fa-type="Line"></div>
+    </div>
+    <div class="col-md-6">
+        <h4 style="text-align:center">Series Overrides</h4>
+        <div fa-chartist fa-data='sodata' fa-options="sooption" fa-responsive-options="soresponsiveoption" fa-type="Line"></div>
+    </div>
+    <div class="col-md-6">
+        <h4 style="text-align:center">Advanced Smil Animations</h4>
+        <div fa-chartist fa-data='asadata' fa-options="asaoption" fa-funct="smil" fa-type="Line"></div>
+    </div>
+    <div class="col-md-6">
+        <h4 style="text-align:center">Svg Path Animation</h4>
+        <div fa-chartist fa-data='spadata' fa-options="spaoption" fa-funct="svg" fa-type="Line"></div>
+    </div>
+    <div class="col-md-6">
+        <h4 style="text-align:center">Some SVG Animation Can Only Be Done With SMIl</h4>
+        <div fa-chartist fa-data='ssvgadata' fa-options="ssvgaoption" fa-funct="ssvgafunct" fa-type="Line" style="margin-left: 5%;"></div>
+    </div>
+</div>
+
+<div class='label'  ng-click="bceCollapsed = !bceCollapsed">
+   <div class="row">
+      <div class="col-md-4 icon"> 
+        <div class="label_icon"><i ng-if="!bceCollapsed" class="fa fa-chevron-up" ></i> 
+          <i ng-if="bceCollapsed" class="fa fa-chevron-down" ></i>
+      </div>
+  </div> 
+  <div class="col-md-8"> 
+    <h4> Bar Chart Example </h4>
+</div>
+</div>
+</div>
+
+<div class="row rowcollapse" ng-hide="bceCollapsed" ng-controller="BarController">
+    <div class="col-md-6 ">
+      <h4 style="text-align:center">Bi-Polar Bar Chart</h4>
+      <div fa-chartist fa-data='bpbcdata' fa-options='bpbcoption' fa-type="Bar"></div>
+  </div>
+  <div class="col-md-6 ">
+      <h4 style="text-align:center">Overlapping Bars On Mobile</h4>
+      <div fa-chartist fa-data='obomdata' fa-options='obomcoption' fa-responsive-options="obomresponsiveoption" fa-type="Bar"></div>
+  </div>
+  <div class="col-md-6 ">
+      <h4 style="text-align:center">Add Peak Circles Using the Draw Events</h4>
+      <div fa-chartist fa-data='apcutddata' fa-options='apcutdoption' fa-funct="barfunct" fa-type="Bar"></div>
+  </div>
+  <div class="col-md-6 ">
+      <h4 style="text-align:center">Multi-Line Labels</h4>
+      <div fa-chartist fa-data='mlldata' fa-options='mlloption' fa-type="Bar"></div>
+  </div>
+  <div class="col-md-6 ">
+      <h4 style="text-align:center">Stacked Bar Chart</h4>
+      <div fa-chartist fa-data='sbcdata' fa-options='sbcoption' fa-funct="sbcfunct" fa-type="Bar"></div>
+  </div>
+  <div class="col-md-6 ">
+      <h4 style="text-align:center">Horizontal Bar Chart</h4>
+      <div fa-chartist fa-data='hbcdata' fa-options='hbcoption' fa-type="Bar"></div>
+  </div>
+  <div class="col-md-6 ">
+      <h4 style="text-align:center">Extreme Responsive Configuration</h4>
+      <div fa-chartist fa-data='ercdata' fa-options='ercoption' fa-responsive-options="ercresponsiveoption" fa-type="Bar"></div>
+  </div>
+  <div class="col-md-6 ">
+      <h4 style="text-align:center">Distributed Series</h4>
+      <div fa-chartist fa-data='dsdata' fa-options='dsoption' fa-type="Bar"></div>
+  </div>
+  <div class="col-md-6 ">
+      <h4 style="text-align:center">Label Placement</h4>
+      <div fa-chartist fa-data='lpdata' fa-options='lpoption' fa-type="Bar" style="margin-left:5%;"></div>
+  </div>
+
+</div>
+
+<div class='label' ng-click="pceCollapsed = !pceCollapsed">
+ <div class="row">
+   <div class="col-md-4 icon"> 
+      <div class="label_icon"><i ng-if="!pceCollapsed" class="fa fa-chevron-up" ></i> 
+        <i ng-if="pceCollapsed" class="fa fa-chevron-down" ></i>
+    </div>
+</div>
+<div class="col-md-8">    
+  <h4>Pie Chart Example  </h4>
+</div>
+</div>
+</div>  
+
+<div class="row rowcollapse" ng-hide="pceCollapsed" ng-controller="PieController">
+  <div class="col-md-6 ">
+    <h4 style="text-align:center">Simple Pie Chart</h4>
+    <div fa-chartist fa-data='spcdata' fa-options='spcoption' fa-type="Pie"></div>
+</div> 
+<div class="col-md-6 ">
+    <h4 style="text-align:center">Pie Chart With Custom Labels</h4>
+    <div fa-chartist fa-data='pcwcldata' fa-options='pcwcloption' fa-responsive-options="pcwclresponsiveoption" fa-type="Pie"></div>
+</div>
+<div class="col-md-6 ">
+    <h4 style="text-align:center">Gauge Chart</h4>
+    <div fa-chartist fa-data='gcdata' fa-options='gcoption'  fa-type="Pie"></div>
+</div>
+<div class="col-md-6 ">
+    <h4 style="text-align:center">Animating a Donut With Svg.Animate</h4>
+    <div fa-chartist fa-data='adwsadata' fa-options='adwsaoption' fa-funct="adwsafunct"  fa-type="Pie"></div>
+</div>    
+</div>
+
+<div class='label' ng-click="pueCollapsed = !pueCollapsed">
+   <div class="row">
+     <div class="col-md-4 icon"> 
+        <div class="label_icon"><i ng-if="!pueCollapsed" class="fa fa-chevron-up" ></i> 
+          <i ng-if="pueCollapsed" class="fa fa-chevron-down" ></i>
+      </div>
+  </div>
+  <div class="col-md-8">    
+    <h4>Plugin use Example  </h4>
+</div>
+</div>
+</div>  
+
+<div class="row rowcollapse" ng-hide="pueCollapsed" ng-controller="PluginController">
+   <div class="col-md-6 ">
+      <h4 style="text-align:center"> Threshold Plugin</h4>
+      <div fa-chartist fa-data='thresholddata' fa-options='thresholdoption' fa-type="Line"></div>
+  </div> 
+</div>
+
+
+<footer>
+  <a href="https://github.com/Loiclp/FA-Chartist"  target="_blank"><img src="img/GitHub-Mark-120px-plus.png"/></a>
+  <p>Made by Loiclp <br/> Credit : <a href="https://gionkunz.github.io/chartist-js/"  target="_blank">Chartist.JS</a>  &  
+    <a href="https://angularjs.org/"  target="_blank">AngularJS</a></p>
+
+</footer>
+<script src="bower_components/chartist/dist/chartist.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<!--<script src="bower_components/angular-animate/angular-animate.min.js"></script>-->
+<script src="bower_components/chartist-plugin-threshold/dist/chartist-plugin-threshold.min.js"></script>
+<script src="bower_components/fa-chartist/src/fa-chartist.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+<script src="app.js"></script>
+<script src="controllers/LineController.js"></script>
+<script src="controllers/BarController.js"></script>
+<script src="controllers/PieController.js"></script>
+<script src="controllers/PluginController.js"></script>
+</body>
+</html> 
