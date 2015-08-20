@@ -2,6 +2,9 @@
 
 Angular Directive to integrate [Chartist](https://gionkunz.github.io/chartist-js/index.html)
 
+## Try it 
+
+Example Site : http://loiclp.github.io/FA-Chartist/
 
 ##	Install
 
