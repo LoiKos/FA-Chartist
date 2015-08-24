@@ -13,12 +13,12 @@
 <body ng-controller="appController">
 	<div class="st_headers">
 		<h3>Chartist.JS Directive For Angular</h3>
-        <img class="img_left" src="img/AngularJS_logo.svg.png"/>
-        <img class="img_right" src="img/chartist.png"/>
+        <img class="img_left" src="img/AngularJS_logo.svg.png" alt ="Angular.JS logo"/>
+        <img class="img_right" src="img/chartist.png" alt="Chartist.JS Logo"/>
     </div>
 
 
-    <div class='label' ng-click="lceCollapsed = !lceCollapsed">
+    <div class='label' ng-click="lceCollapsed = !lceCollapsed ; !lceCollapsed ? $emit('fa-Chartist:update'): '' ">
         <div class="row">
           <div class="col-md-4 icon">
             <div class="label_icon"><i ng-if="!lceCollapsed" class="fa fa-chevron-up " ></i> 
@@ -83,7 +83,7 @@
     </div>
 </div>
 
-<div class='label'  ng-click="bceCollapsed = !bceCollapsed">
+<div class='label'  ng-click="bceCollapsed = !bceCollapsed ; !bceCollapsed ? $emit('fa-Chartist:update'): '' ">
    <div class="row">
       <div class="col-md-4 icon"> 
         <div class="label_icon"><i ng-if="!bceCollapsed" class="fa fa-chevron-up" ></i> 
@@ -136,7 +136,7 @@
 
 </div>
 
-<div class='label' ng-click="pceCollapsed = !pceCollapsed">
+<div class='label' ng-click="pceCollapsed = !pceCollapsed ; !pceCollapsed ? $emit('fa-Chartist:update'): '' ">
  <div class="row">
    <div class="col-md-4 icon"> 
       <div class="label_icon"><i ng-if="!pceCollapsed" class="fa fa-chevron-up" ></i> 
@@ -168,42 +168,62 @@
 </div>    
 </div>
 
-<div class='label' ng-click="pueCollapsed = !pueCollapsed">
+<div class='label' ng-click="pueCollapsed = !pueCollapsed; !pueCollapsed ? $emit('fa-Chartist:update'): '' ">
    <div class="row">
      <div class="col-md-4 icon"> 
         <div class="label_icon"><i ng-if="!pueCollapsed" class="fa fa-chevron-up" ></i> 
           <i ng-if="pueCollapsed" class="fa fa-chevron-down" ></i>
       </div>
   </div>
-  <div class="col-md-8">    
-    <h4>Plugin use Example  </h4>
-</div>
-</div>
+    <div class="col-md-8">    
+      <h4>Plugin use Example  </h4>
+    </div>
+  </div>
 </div>  
 
 <div class="row rowcollapse" ng-hide="pueCollapsed" ng-controller="PluginController">
    <div class="col-md-6 ">
       <h4 style="text-align:center"> Threshold Plugin</h4>
       <div fa-chartist fa-data='thresholddata' fa-options='thresholdoption' fa-type="Line"></div>
-  </div> 
+  </div>
+   <div class="col-md-6 accessibility">
+      <h4 style="text-align:center"> Accessibility Plugin</h4>
+      <div fa-chartist fa-data='accessibilitydata' fa-options='accessibilityoption' fa-type="Line"></div>
+  </div>
+  <div class="col-md-6">
+      <h4 style="text-align:center"> Point Label Plugin</h4>
+      <div fa-chartist fa-data='pointlabeldata' fa-options='pointlabeloption' fa-type="Line"></div>
+  </div>
+  <div class="col-md-6">
+      <h4 style="text-align:center"> Sketchy Plugin</h4>
+      <div fa-chartist fa-data='sketchydata' fa-options='sketchyoption' fa-funct ="sketchyfunc" fa-type="Bar"></div>
+  </div>
+    <div class="col-md-6">
+      <h4 style="text-align:center"> Axistitle Plugin</h4>
+      <div fa-chartist fa-data='axistitledata' fa-options='axistitleoption' fa-type="Line" style="margin-left:2%;"></div>
+  </div>          
 </div>
 
 
 <footer>
-  <a href="https://github.com/Loiclp/FA-Chartist"  target="_blank"><img src="img/GitHub-Mark-120px-plus.png"/></a>
+  <a href="https://github.com/Loiclp/FA-Chartist"  target="_blank"><img src="img/GitHub-Mark-120px-plus.png" alt="Github logo"/></a>
   <p>Made by Loiclp <br/> Credit : <a href="https://gionkunz.github.io/chartist-js/"  target="_blank">Chartist.JS</a>  &  
     <a href="https://angularjs.org/"  target="_blank">AngularJS</a></p>
-
 </footer>
-<script src="bower_components/chartist/dist/chartist.min.js"></script>
-<script src="bower_components/angular/angular.min.js"></script>
-<script src="bower_components/chartist-plugin-threshold/dist/chartist-plugin-threshold.min.js"></script>
-<script src="bower_components/fa-chartist/src/fa-chartist.js"></script>
-<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
-<script src="app.js"></script>
-<script src="controllers/LineController.js"></script>
-<script src="controllers/BarController.js"></script>
-<script src="controllers/PieController.js"></script>
-<script src="controllers/PluginController.js"></script>
+
+  <script src="bower_components/chartist/dist/chartist.min.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/chartist-plugin-threshold/dist/chartist-plugin-threshold.min.js"></script>
+  <script src="bower_components/chartist-plugin-pointlabels/dist/chartist-plugin-pointlabels.min.js"></script>
+  <script src="bower_components/chartist-plugin-accessibility/dist/chartist-plugin-accessibility.min.js"></script>
+  <script src="bower_components/chartist-plugin-sketchy/dist/chartist-plugin-sketchy.min.js"></script>
+  <script src="bower_components/chartist-plugin-axistitle/dist/chartist-plugin-axistitle.min.js"></script>
+  <script src="bower_components/fa-chartist/src/fa-chartist.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+  <script src="app.js"></script>
+  <script src="controllers/LineController.js"></script>
+  <script src="controllers/BarController.js"></script>
+  <script src="controllers/PieController.js"></script>
+  <script src="controllers/PluginController.js"></script>
 </body>
 </html> 

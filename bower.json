@@ -23,6 +23,10 @@
     "fontawesome": "~4.4.0",
     "angular": "~1.4.4",
     "chartist-plugin-threshold": "~0.0.2",
-    "angular-bootstrap": "~0.13.3"
+    "angular-bootstrap": "~0.13.3",
+    "chartist-plugin-accessibility": "~0.0.4",
+    "chartist-plugin-pointlabels": "~0.0.4",
+    "chartist-plugin-sketchy": "~0.0.2",
+    "chartist-plugin-axistitle": "~0.1.0"
   }
 }

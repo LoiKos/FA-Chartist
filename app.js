@@ -8,9 +8,11 @@ myApp.controller('appController', ['$scope','$rootScope', function($scope,$rootS
   // Web Site controls
 
 
-   $scope.lceCollapsed = false;
-   $scope.bceCollapsed = false;
-   $scope.pceCollapsed = false;
-   $scope.pueCollapsed = false;
+   $scope.lceCollapsed = true;
+   $scope.bceCollapsed = true;
+   $scope.pceCollapsed = true;
+   $scope.pueCollapsed = true;
+
+  
 
 }]);
